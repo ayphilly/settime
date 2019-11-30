@@ -17,6 +17,10 @@ class App extends Component {
         this.myserver();
         setInterval(this.myserver,5000);
     }
+    componentWillMount(){
+        this.myserver();
+        setInterval(this.myserver,5000);
+    }
     myserver = ()=>{
         client.getTimers((server)=>{
             this.setState({timers: server});
